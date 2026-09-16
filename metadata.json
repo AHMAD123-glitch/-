@@ -1,0 +1,6 @@
+{
+  "name": "معهد السنة",
+  "description": "التطبيق الرسمي لمعهد السنة بإشراف فضيلة الشيخ هيثم بن محمد بن جميل سرحان حفظه الله - تلاوة وتفسير القرآن، الدروس الصوتية والمرئية، الكتب والمؤلفات، وجدول اللقاءات العلمية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
