@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, BookOpen, Headphones, Video, Calendar, BookMarked, Mail } from 'lucide-react';
+import { Home, BookOpen, Headphones, Video, Calendar, BookMarked, Mail, Sparkles } from 'lucide-react';
 import { TabType } from '../types';
 
 interface BottomNavProps {
@@ -11,6 +11,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentTab, setCurrentTab 
   const items: { id: TabType; label: string; icon: React.ReactNode }[] = [
     { id: 'home', label: 'الرئيسية', icon: <Home className="w-5 h-5" /> },
     { id: 'quran', label: 'القرآن', icon: <BookOpen className="w-5 h-5" /> },
+    { id: 'hadeeth', label: 'الحديث', icon: <Sparkles className="w-5 h-5" /> },
     { id: 'audio', label: 'الصوتيات', icon: <Headphones className="w-5 h-5" /> },
     { id: 'video', label: 'المرئيات', icon: <Video className="w-5 h-5" /> },
     { id: 'books', label: 'الكتب', icon: <BookMarked className="w-5 h-5" /> },

@@ -55,6 +55,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
+                <button onClick={() => onNavigate('hadeeth')} className="hover:text-amber-300 font-bold transition-colors cursor-pointer flex items-center gap-1">
+                  <span>موسوعة الحديث النبوي (72 لغة)</span>
+                </button>
+              </li>
+              <li>
                 <button onClick={() => onNavigate('audio')} className="hover:text-white transition-colors cursor-pointer">
                   الدروس والمحاضرات الصوتية
                 </button>
@@ -90,6 +95,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   <span className="text-[11px] text-stone-400 font-mono">{INSTITUTE_INFO.officialWebsiteDisplay}</span>
                 </div>
                 <ExternalLink className="w-3.5 h-3.5 mr-auto text-stone-500" />
+              </a>
+
+              <a
+                href="https://sarhaan.com/hadeeth/ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 p-2.5 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-900/50 text-emerald-200 hover:text-white transition-colors"
+              >
+                <Globe className="w-4 h-4 text-emerald-400" />
+                <div className="overflow-hidden">
+                  <span className="block font-bold text-emerald-100">موسوعة أحاديث النبي ﷺ</span>
+                  <span className="text-[11px] text-emerald-300/80 font-mono">sarhaan.com/hadeeth</span>
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 mr-auto text-emerald-400" />
               </a>
 
               <a

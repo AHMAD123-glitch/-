@@ -12,10 +12,11 @@ import {
   GraduationCap,
   Scroll,
   Radio,
-  BookMarked
+  BookMarked,
+  Globe
 } from 'lucide-react';
 import { TabType, AudioLesson } from '../types';
-import { INSTITUTE_INFO, SCHEDULE_ITEMS, DAILY_BENEFITS, BOOKS_LIST } from '../data/mockData';
+import { INSTITUTE_INFO, SCHEDULE_ITEMS, DAILY_BENEFITS, BOOKS_LIST, HADEETH_ENCYCLOPEDIA_INFO } from '../data/mockData';
 import { ActiveAudio } from './AudioPlayer';
 
 interface HomeSectionProps {
@@ -66,6 +67,15 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <button
+              id="hero-explore-hadeeth-btn"
+              onClick={() => onNavigate('hadeeth')}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-stone-950 font-bold text-sm shadow-lg shadow-amber-900/30 transition-all hover:translate-y-[-1px] cursor-pointer"
+            >
+              <Sparkles className="w-4 h-4 text-stone-950" />
+              <span>موسوعة الحديث النبوي (72 لغة)</span>
+            </button>
+
+            <button
               id="hero-explore-quran-btn"
               onClick={() => onNavigate('quran')}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-lg shadow-emerald-900/40 transition-all hover:translate-y-[-1px] cursor-pointer"
@@ -88,7 +98,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
               href={INSTITUTE_INFO.booksWebsite}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-600/90 hover:bg-amber-500 text-stone-950 font-bold text-sm shadow transition-all hover:translate-y-[-1px]"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-300 border border-amber-600/40 font-semibold text-sm shadow transition-all hover:translate-y-[-1px]"
             >
               <BookMarked className="w-4 h-4" />
               <span>مؤلفات الشيخ (sarhaan.com)</span>
@@ -151,6 +161,36 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Card: Hadeeth Encyclopedia (NEW) */}
+          <div 
+            id="portal-card-hadeeth"
+            onClick={() => onNavigate('hadeeth')}
+            className="group bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 text-white rounded-2xl p-5 border border-emerald-700/50 shadow-md hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between"
+          >
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 group-hover:bg-amber-500 group-hover:text-stone-950 transition-colors flex items-center justify-center">
+                  <Sparkles className="w-6 h-6" />
+                </div>
+                <span className="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded font-bold">
+                  3,582 حديث • 72 لغة
+                </span>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white group-hover:text-amber-300 transition-colors font-amiri">
+                  موسوعة أحاديث النبي ﷺ
+                </h3>
+                <p className="text-xs text-stone-300 mt-1 leading-relaxed">
+                  موسوعة عالمية تشمل شروح الأحاديث، معاني المفردات، الفوائد، وسير السنة بـ 72 لغة عالمية.
+                </p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-emerald-900/60 flex items-center justify-between text-xs font-semibold text-amber-300 group-hover:translate-x-[-4px] transition-transform">
+              <span>تصفح الموسوعة والبحث</span>
+              <ArrowLeft className="w-4 h-4" />
+            </div>
+          </div>
+
           {/* Card: Quran */}
           <div 
             id="portal-card-quran"

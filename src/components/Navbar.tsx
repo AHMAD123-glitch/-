@@ -10,7 +10,8 @@ import {
   ExternalLink, 
   Menu, 
   X,
-  Compass
+  Compass,
+  Sparkles
 } from 'lucide-react';
 import { TabType } from '../types';
 import { INSTITUTE_INFO } from '../data/mockData';
@@ -27,6 +28,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
     { id: 'home', label: 'الرئيسية', icon: <Home className="w-4 h-4" /> },
     { id: 'about', label: 'عن المعهد', icon: <Info className="w-4 h-4" /> },
     { id: 'quran', label: 'القرآن الكريم', icon: <BookOpen className="w-4 h-4" /> },
+    { id: 'hadeeth', label: 'موسوعة الحديث', icon: <Sparkles className="w-4 h-4 text-amber-400" /> },
     { id: 'audio', label: 'الدروس الصوتية', icon: <Headphones className="w-4 h-4" /> },
     { id: 'video', label: 'الدروس المرئية', icon: <Video className="w-4 h-4" /> },
     { id: 'books', label: 'الكتب والمؤلفات', icon: <Compass className="w-4 h-4" /> },

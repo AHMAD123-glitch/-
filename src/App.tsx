@@ -8,6 +8,7 @@ import { VideoModal } from './components/VideoModal';
 import { HomeSection } from './components/HomeSection';
 import { AboutSection } from './components/AboutSection';
 import { QuranSection } from './components/QuranSection';
+import { HadeethEncyclopediaSection } from './components/HadeethEncyclopediaSection';
 import { AudioLessonsSection } from './components/AudioLessonsSection';
 import { VideoLessonsSection } from './components/VideoLessonsSection';
 import { BooksSection } from './components/BooksSection';
@@ -60,6 +61,12 @@ export default function App() {
 
             {currentTab === 'quran' && (
               <QuranSection 
+                onPlayAudio={handlePlayAudio}
+              />
+            )}
+
+            {currentTab === 'hadeeth' && (
+              <HadeethEncyclopediaSection 
                 onPlayAudio={handlePlayAudio}
               />
             )}

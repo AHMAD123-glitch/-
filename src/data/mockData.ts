@@ -1,4 +1,4 @@
-import { AudioLesson, VideoLesson, Book, QuranSurah, ScheduleItem } from '../types';
+import { AudioLesson, VideoLesson, Book, QuranSurah, ScheduleItem, HadeethItem } from '../types';
 
 export const INSTITUTE_INFO = {
   name: 'معهد السنة',
@@ -398,3 +398,175 @@ export const DAILY_BENEFITS = [
     source: 'مجالس التدبر'
   }
 ];
+
+export const HADEETH_ENCYCLOPEDIA_INFO = {
+  title: 'موسوعة أحاديث النبي ﷺ',
+  subtitle: 'موسوعة الحديث النبوي الشريف',
+  supervisor: 'فضيلة الشيخ / هيثم بن محمد بن جميل سرحان حفظه الله',
+  totalHadeeths: '3,582',
+  totalLanguages: 72,
+  description: 'مشروع علمي عالمي متكامل لخدمة السنة النبوية، يضم 3,582 حديثاً نبوياً مشروحاً ومبيناً لمعانيها وفوائدها العقدية والفقهية والتربوية، ومترجماً بدقة واحترافية إلى 72 لغة حية حول العالم، لتيسير وصول كلام النبي ﷺ لجميع المسلمين والباحثين.',
+  targetAudience: 'مناسبة لطلاب العلم، الباحثين الأكاديميين، والدعاة، وعموم المسلمين في مشارق الأرض ومغاربها.',
+  scope: [
+    'شرح الأحاديث النبوية المعتمدة مع ربطها بالأبواب الفقهية والعقدية والتربوية',
+    'بيان المعاني الغريبة والمفردات اللغوية في متون الأحاديث',
+    'استنباط الفوائد العقدية والأحكام الفقهية والمسالك التربوية',
+    'العناية بسير السنة النبوية وتاريخ تدوينها ومصطلحات علوم الحديث',
+    'ترجمة الأحاديث وشروحها إلى 72 لغة عالمية معتمدة'
+  ],
+  links: {
+    main: 'https://sarhaan.com/hadeeth',
+    mainDisplay: 'sarhaan.com/hadeeth',
+    arabic: 'https://sarhaan.com/hadeeth/ar/',
+    arabicDisplay: 'sarhaan.com/hadeeth/ar',
+    quranEncyclopedia: 'https://sarhaan.com/quran-3/',
+    quranEncyclopediaDisplay: 'sarhaan.com/quran-3'
+  },
+  introVideo: {
+    title: 'فيديو تعريفي بموسوعة أحاديث النبي ﷺ — الشيخ هيثم سرحان',
+    embedUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ',
+    description: 'عرض تعريفي شامل بجهود الموسوعة وأقسامها الـ 72 لغة وكيفية الاستفادة منها في الدعوة والتعلم.'
+  }
+};
+
+export const HADEETH_LANGUAGES = [
+  { code: 'ar', name: 'العربية', english: 'Arabic', flag: '🇸🇦', active: true, url: 'https://sarhaan.com/hadeeth/ar/' },
+  { code: 'en', name: 'الإنجليزية', english: 'English', flag: '🇬🇧', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'fr', name: 'الفرنسية', english: 'French', flag: '🇫🇷', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'ur', name: 'الأردية', english: 'Urdu', flag: '🇵🇰', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'id', name: 'الإندونيسية', english: 'Indonesian', flag: '🇮🇩', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'tr', name: 'التركية', english: 'Turkish', flag: '🇹🇷', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'ru', name: 'الروسية', english: 'Russian', flag: '🇷🇺', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'bn', name: 'البنغالية', english: 'Bengali', flag: '🇧🇩', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'es', name: 'الإسبانية', english: 'Spanish', flag: '🇪🇸', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'de', name: 'الألمانية', english: 'German', flag: '🇩🇪', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'fa', name: 'الفارسية', english: 'Persian', flag: '🇮🇷', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'sw', name: 'السواحيلية', english: 'Swahili', flag: '🇰🇪', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'zh', name: 'الصينية', english: 'Chinese', flag: '🇨🇳', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'hi', name: 'الهندية', english: 'Hindi', flag: '🇮🇳', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'ms', name: 'الملايو', english: 'Malay', flag: '🇲🇾', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'ha', name: 'الهوسا', english: 'Hausa', flag: '🇳🇬', active: true, url: 'https://sarhaan.com/hadeeth' },
+];
+
+export const SAMPLE_HADEETHS: HadeethItem[] = [
+  {
+    id: 'had-1',
+    number: 1,
+    title: 'حديث إنما الأعمال بالنيات',
+    chapter: 'كتاب الإيمان والنية',
+    rawi: 'عمر بن الخطاب رضي الله عنه',
+    text: '«إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إِلَى دُنْيَا يُصِيبُهَا، أَوْ إِلَى امْرَأَةٍ يَنْكِحُهَا، فَهِجْرَتُهُ إِلَى مَا هَاجَرَ إِلَيْهِ».',
+    source: 'صحيح البخاري (1) وصحيح مسلم (1907)',
+    takhrij: 'متفق عليه — أصح الأحاديث',
+    explanation: 'هذا الحديث أصل عظيم من أصول الإسلام، وقاعدة كبرى تدور عليها الشريعة. بين فيه النبي ﷺ أن صحة الأعمال وقبولها ومراتب الثواب عليها معلقة بنيات العاملين وقصدهم الإخلاص لوجه الله وحده دون إشراك غيره.',
+    meanings: [
+      { word: 'النيات', meaning: 'جمع نية، وهي القصد وعزم القلب على فعل الشيء تقرباً لله تعالى.' },
+      { word: 'هجرته', meaning: 'الهجرة في الأصل الانتقال والترك، والمراد هنا الانتقال من دار الشرك إلى دار الإسلام أو ترك المعاصي.' },
+      { word: 'ينكحها', meaning: 'يتزوجها ويعقد عليها.' }
+    ],
+    benefits: [
+      'وجوب إخلاص النية لله تعالى في سائر العبادات والطاعات.',
+      'النية تميز العبادة عن العادة، وتميز رتب العبادات بعضها عن بعض (فرض أو نفل).',
+      'التحذير من إرادة الدنيا بعمل الآخرة والرياء وحب السمعة.',
+      'أن العمل الواحد يعظم ثوابه أو ينقص بحسب ما يقوم في قلب العبد من الصدق واليقين.'
+    ],
+    audioUrl: 'https://server10.mp3quran.net/minsh/001.mp3',
+    englishText: 'Actions are according to intentions, and every person will have only that which he intended. So whoever emigrated for the sake of the world or for a woman to marry, his emigration is for that for which he emigrated.'
+  },
+  {
+    id: 'had-2',
+    number: 2,
+    title: 'حديث جبريل الطويل في مراتب الدين (الإسلام والإيمان والإحسان)',
+    chapter: 'كتاب الإيمان والعقيدة',
+    rawi: 'عمر بن الخطاب رضي الله عنه',
+    text: '«بَيْنَمَا نَحْنُ جُلُوسٌ عِنْدَ رَسُولِ اللَّهِ ﷺ ذَاتَ يَوْمٍ، إِذْ طَلَعَ عَلَيْنَا رَجُلٌ شَدِيدُ بَيَاضِ الثِّيَابِ، شَدِيدُ سَوَادِ الشَّعْرِ، لا يُرَى عَلَيْهِ أَثَرُ السَّفَرِ، وَلا يَعْرِفُهُ مِنَّا أَحَدٌ... فَقَالَ: يَا مُحَمَّدُ أَخْبِرْنِي عَنِ الإِسْلامِ... قَالَ: فَأَخْبِرْنِي عَنِ الإِيمَانِ... قَالَ: فَأَخْبِرْنِي عَنِ الإِحْسَانِ... ثُمَّ قَالَ: هَذَا جِبْرِيلُ أَتَاكُمْ يُعَلِّمُكُمْ دِينَكُمْ».',
+    source: 'صحيح مسلم (8)',
+    takhrij: 'صحيح مسلم — أصل جليل في معالم الدين',
+    explanation: 'يُسمى هذا الحديث بأم السنة لاشتماله على جميع قواعد الدين ومراتبه الثلاث: الإسلام بأركانه الظاهرة، والإيمان بأركانه الباطنة الستة، والإحسان وهو أعلى المراتب وأجلها، مع علامات الساعة.',
+    meanings: [
+      { word: 'الإحسان', meaning: 'أن تعبد الله كأنك تراه، فإن لم تكن تراه فإنه يراك (مقام المراقبة والمشاهدة).' },
+      { word: 'أماراتها', meaning: 'علاماتها ودلائل قرب قيامها.' },
+      { word: 'يتطاولون', meaning: 'يتفاخرون في بناء البيوت العالية المزخرفة.' }
+    ],
+    benefits: [
+      'بيان مراتب الدين الثلاث: الإسلام، ثم الإيمان، ثم الإحسان.',
+      'أركان الإيمان الستة: الإيمان بالله وملائكته وكتبه ورسله واليوم الآخر وبالقدر خيره وشره.',
+      'حسن أدب المتعلم مع المعلم كما فعل جبريل عليه السلام بجلوسه وهيئته النظيفة.',
+      'أهمية السؤال التعليمي الذي يقصد به السائل نفع الحاضرين.'
+    ],
+    audioUrl: 'https://server13.mp3quran.net/husr/036.mp3',
+    englishText: 'Jibreel came in the form of a man to teach the companions the matters and levels of their religion: Islam, Iman, and Ihsan.'
+  },
+  {
+    id: 'had-3',
+    number: 3,
+    title: 'حديث بني الإسلام على خمس',
+    chapter: 'كتاب أركان الإسلام',
+    rawi: 'عبد الله بن عمر رضي الله عنهما',
+    text: '«بُنِيَ الإِسْلامُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لا إِلَهَ إِلا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلاةِ، وَإِيتَاءِ الزَّكَاةِ، وَحَجِّ الْبَيْتِ، وَصَوْمِ رَمَضَانَ».',
+    source: 'صحيح البخاري (8) وصحيح مسلم (16)',
+    takhrij: 'متفق عليه',
+    explanation: 'مثل النبي ﷺ الإسلام ببناء محكم قائم على خمس دعائم عظام، متى سقطت إحداها تهدم البناء أو اختل ركنه الأساس.',
+    meanings: [
+      { word: 'بني الإسلام', meaning: 'شبه الإسلام بقبة قائمة على أوتاد ودعائم.' },
+      { word: 'إقام الصلاة', meaning: 'المحافظة على أدائها في أوقاتها بشروطها وأركانها وواجباتها بخشوع.' },
+      { word: 'إيتاء الزكاة', meaning: 'إخراج القدر الواجب شرعاً من المال لمستحقيه المحددين.' }
+    ],
+    benefits: [
+      'بيان الأركان الخمسة التي لا يصح إسلام العبد إلا بالقيام بها.',
+      'تقديم الشهادتين لأنهما الأصل والشرط في صحة سائر الأعمال.',
+      'عظم شأن الصلاة وأنها الركن العملي الأول بعد الشهادتين.',
+      'فرضية الزكاة والصيام وحج بيت الله الحرام لمن استطاع إليه سبيلاً.'
+    ],
+    audioUrl: 'https://server8.mp3quran.net/afs/067.mp3',
+    englishText: 'Islam is built upon five pillars: testifying that there is no god but Allah and Muhammad is His messenger, establishing prayer, giving zakah, pilgrimage to the House, and fasting Ramadan.'
+  },
+  {
+    id: 'had-4',
+    number: 4,
+    title: 'حديث النصيحة لله ولكتابه ولرسوله ولأئمة المسلمين وعامتهم',
+    chapter: 'كتاب الآداب ومحاسن الأخلاق',
+    rawi: 'تميم بن أوس الداري رضي الله عنه',
+    text: '«الدِّينُ النَّصِيحَةُ، قُلْنَا: لِمَنْ يَا رَسُولَ اللَّهِ؟ قَالَ: لِلَّهِ، وَلِكِتَابِهِ، وَلِرَسُولِهِ، وَلأَئِمَّةِ الْمُسْلِمِينَ، وَعَامَّتِهِمْ».',
+    source: 'صحيح مسلم (55)',
+    takhrij: 'صحيح مسلم',
+    explanation: 'النصيحة كلمة جامعة تدل على إرادة الخير والكمال للمنصوح له؛ فالنصيحة لله بتوحيده وطاعته، ولكتابه بتصديقه والعمل به، ولرسوله باتباع سنته ونصرته، ولولاة الأمر بمعاونتهم على الحق، ولعامة المسلمين بإرشادهم ومحبتهم.',
+    meanings: [
+      { word: 'النصيحة', meaning: 'إخلاص النية وإرادة الخير والإصلاح للمنصوح له.' },
+      { word: 'أئمة المسلمين', meaning: 'ولاتهم وحكامهم، وعلماؤهم المعتبرون.' },
+      { word: 'عامتهم', meaning: 'سائر المسلمين من غير الرعاة والعلماء.' }
+    ],
+    benefits: [
+      'علو منزلة النصيحة وأنها عماد الدين وسياجه.',
+      'أن النصيحة للعامة تكون بالرفق واللين والدعوة بالحكمة والموعظة الحسنة.',
+      'النصيحة لولاة الأمر تكون بالدعاء لهم والتعاون معهم على البر والتقوى ومناصحتهم بالسر والحكمة.',
+      'حب الخير للمسلمين وكف الأذى عنهم وإعانتهم في نوائب الدهر.'
+    ],
+    audioUrl: 'https://server9.mp3quran.net/hthfi/112.mp3',
+    englishText: 'Religion is sincere advice. We asked: To whom, O Messenger of Allah? He said: To Allah, to His Book, to His Messenger, and to the leaders of the Muslims and their common folk.'
+  },
+  {
+    id: 'had-5',
+    number: 5,
+    title: 'حديث لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه',
+    chapter: 'كتاب حقوق المسلم والأخوة الإيمانية',
+    rawi: 'أنس بن مالك رضي الله عنه',
+    text: '«لا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ مِنَ الْخَيْرِ».',
+    source: 'صحيح البخاري (13) وصحيح مسلم (45)',
+    takhrij: 'متفق عليه',
+    explanation: 'ينفي الحديث كمال الإيمان الواجب عمن لا يحب لإخوانه المسلمين من خيري الدنيا والآخرة ما يحبه لنفسه، ويكره لهم ما يكره لنفسه، وهو علاج حاسم لأمراض الحسد والشح والأنانية.',
+    meanings: [
+      { word: 'لا يؤمن', meaning: 'أي لا يكمل إيمانه الواجب كمالاً يستحق به الثواب الكامل.' },
+      { word: 'من الخير', meaning: 'كل أمر مباح أو محبوب شرعاً من الطاعات ونعم الدنيا المباحة.' }
+    ],
+    benefits: [
+      'سلامة الصدر ونقاء القلب من الغل والحسد شرط لكمال الإيمان.',
+      'عقد الأخوة الإيمانية يقتضي التكافل والتعاطف والتراحم بين أبناء الأمة.',
+      'أن يكره لأخيه ما يكره لنفسه من الشر والأذى والفسوق.',
+      'حث المسلم على مشاركة إخوانه في السراء والضراء.'
+    ],
+    audioUrl: 'https://server7.mp3quran.net/basit/113.mp3',
+    englishText: 'None of you truly believes until he loves for his brother what he loves for himself of good.'
+  }
+];
+

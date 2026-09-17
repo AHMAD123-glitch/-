@@ -2,11 +2,28 @@ export type TabType =
   | 'home'
   | 'about'
   | 'quran'
+  | 'hadeeth'
   | 'audio'
   | 'video'
   | 'books'
   | 'schedule'
   | 'contact';
+
+export interface HadeethItem {
+  id: string;
+  number: number;
+  title: string;
+  chapter: string; // الباب / الموضوع
+  rawi: string; // الصحابي الراوي
+  text: string; // متن الحديث
+  source: string; // رواه البخاري / مسلم ...
+  takhrij: string; // درجة الحديث وتخريجه
+  explanation: string; // شرح الحديث
+  meanings: { word: string; meaning: string }[]; // معاني المفردات
+  benefits: string[]; // الفوائد والأحكام المستنبطة
+  audioUrl?: string;
+  englishText?: string;
+}
 
 export interface AudioLesson {
   id: string;
