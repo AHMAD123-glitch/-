@@ -4,7 +4,6 @@ import { TabType, VideoLesson } from './types';
 import { Navbar } from './components/Navbar';
 import { BottomNav } from './components/BottomNav';
 import { AudioPlayer, ActiveAudio } from './components/AudioPlayer';
-import { VideoModal } from './components/VideoModal';
 import { HomeSection } from './components/HomeSection';
 import { AboutSection } from './components/AboutSection';
 import { QuranSection } from './components/QuranSection';
@@ -15,12 +14,11 @@ import { BooksSection } from './components/BooksSection';
 import { ScheduleSection } from './components/ScheduleSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-import { AUDIO_LESSONS, VIDEO_LESSONS } from './data/mockData';
+import { AUDIO_LESSONS, VIDEO_LESSONS, INSTITUTE_INFO } from './data/mockData';
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState<TabType>('home');
   const [currentAudio, setCurrentAudio] = useState<ActiveAudio | null>(null);
-  const [selectedVideo, setSelectedVideo] = useState<VideoLesson | null>(null);
 
   const handlePlayAudio = (audio: ActiveAudio) => {
     setCurrentAudio(audio);
@@ -28,7 +26,11 @@ export default function App() {
 
   const handleOpenVideoById = (videoId: string) => {
     const video = VIDEO_LESSONS.find(v => v.id === videoId) || VIDEO_LESSONS[0];
-    setSelectedVideo(video);
+    window.open(video.videoUrl || INSTITUTE_INFO.officialYouTube, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleOpenVideoDirectly = (video: VideoLesson) => {
+    window.open(video.videoUrl || INSTITUTE_INFO.officialYouTube, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -77,7 +79,7 @@ export default function App() {
 
             {currentTab === 'video' && (
               <VideoLessonsSection 
-                onSelectVideo={setSelectedVideo}
+                onSelectVideo={handleOpenVideoDirectly}
               />
             )}
 
@@ -100,12 +102,6 @@ export default function App() {
       <AudioPlayer 
         currentAudio={currentAudio} 
         onClose={() => setCurrentAudio(null)} 
-      />
-
-      {/* Video Modal Player if active */}
-      <VideoModal 
-        video={selectedVideo} 
-        onClose={() => setSelectedVideo(null)} 
       />
 
       {/* Footer */}

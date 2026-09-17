@@ -14,7 +14,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentTab, setCurrentTab 
     { id: 'hadeeth', label: 'الحديث (قريباً)', icon: <Sparkles className="w-5 h-5" /> },
     { id: 'audio', label: 'الصوتيات', icon: <Headphones className="w-5 h-5" /> },
     { id: 'video', label: 'المرئيات', icon: <Video className="w-5 h-5" /> },
-    { id: 'books', label: 'المؤلفات (قريباً)', icon: <BookMarked className="w-5 h-5" /> },
+    { id: 'books', label: 'قريباً بإذن الله', icon: <Sparkles className="w-5 h-5 text-amber-400" /> },
     { id: 'schedule', label: 'الجدول', icon: <Calendar className="w-5 h-5" /> },
     { id: 'contact', label: 'تواصل', icon: <Mail className="w-5 h-5" /> },
   ];

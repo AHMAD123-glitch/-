@@ -52,24 +52,13 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
 
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                id="watch-official-youtube-btn"
-                href="https://www.youtube.com/@MAHADSUNNAH"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm shadow-lg transition-all hover:scale-105 active:scale-95"
-              >
-                <span>مشاهدة الدرس عبر قناة معهد السنة الرسمية (@MAHADSUNNAH)</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-
-              <a
                 id="watch-official-site-btn"
                 href={INSTITUTE_INFO.officialWebsite}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-lg transition-all hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg transition-all hover:scale-105 active:scale-95"
               >
-                <span>الموقع الرسمي: {INSTITUTE_INFO.officialWebsiteDisplay}</span>
+                <span>فتح الدرس عبر موقع المعهد الرسمي ({INSTITUTE_INFO.officialWebsiteDisplay})</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
             </div>

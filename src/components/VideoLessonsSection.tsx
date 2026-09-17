@@ -57,15 +57,43 @@ export const VideoLessonsSection: React.FC<VideoLessonsSectionProps> = ({ onSele
           </div>
 
           <a
-            href={INSTITUTE_INFO.officialWebsite}
+            id="official-youtube-channel-header-btn"
+            href={INSTITUTE_INFO.officialYouTube}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition-colors shrink-0 shadow"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs transition-colors shrink-0 shadow-lg"
           >
-            <span>قناة المعهد الرسمية</span>
+            <span>قناة معهد السنة الرسمية (@mahadsunnah)</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
+      </div>
+
+      {/* Direct Channel Link Notification */}
+      <div className="bg-stone-900 text-stone-200 border border-stone-800 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center font-bold text-sm shrink-0">
+            ▶
+          </div>
+          <div>
+            <h4 className="text-sm font-bold text-white">
+              القناة الرسمية المعتمدة لفضيلة الشيخ د. هيثم سرحان
+            </h4>
+            <p className="text-xs text-stone-400">
+              جميع الدروس والشروحات المرئية مرتبطة ومتاحة مباشرة عبر قناة معهد السنة: <span className="text-red-400 font-mono font-bold">@mahadsunnah</span>
+            </p>
+          </div>
+        </div>
+
+        <a
+          href={INSTITUTE_INFO.officialYouTube}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold transition-all shadow shrink-0"
+        >
+          <span>فتح القناة مباشرة</span>
+          <ExternalLink className="w-3.5 h-3.5" />
+        </a>
       </div>
 
       {/* Filter and Search Bar */}
@@ -105,10 +133,12 @@ export const VideoLessonsSection: React.FC<VideoLessonsSectionProps> = ({ onSele
       {/* Video Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {filteredVideos.map((video) => (
-          <div
+          <a
             key={video.id}
-            className="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md hover:border-sky-300 transition-all flex flex-col group cursor-pointer"
-            onClick={() => onSelectVideo(video)}
+            href={video.videoUrl || INSTITUTE_INFO.officialYouTube}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md hover:border-red-300 transition-all flex flex-col group block no-underline text-inherit"
           >
             {/* Thumbnail Box */}
             <div className="relative aspect-video bg-gradient-to-br from-stone-900 to-sky-950 flex items-center justify-center overflow-hidden">
@@ -116,7 +146,7 @@ export const VideoLessonsSection: React.FC<VideoLessonsSectionProps> = ({ onSele
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
               
               {/* Play Button Icon */}
-              <div className="relative z-10 w-14 h-14 rounded-full bg-sky-600/90 text-white flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:bg-sky-500 transition-transform">
+              <div className="relative z-10 w-14 h-14 rounded-full bg-red-600 text-white flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:bg-red-500 transition-transform">
                 <Play className="w-6 h-6 fill-current ml-0.5" />
               </div>
 
@@ -126,15 +156,19 @@ export const VideoLessonsSection: React.FC<VideoLessonsSectionProps> = ({ onSele
                 {video.duration}
               </span>
 
-              <span className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-full bg-sky-900/80 text-sky-200 text-[11px] font-semibold border border-sky-600/40">
+              <span className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-full bg-stone-900/85 text-stone-200 text-[11px] font-semibold border border-stone-700">
                 {video.series}
+              </span>
+
+              <span className="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-red-700 text-white text-[10px] font-bold flex items-center gap-1 shadow">
+                <span>YouTube: {INSTITUTE_INFO.officialYouTubeDisplay}</span>
               </span>
             </div>
 
             {/* Content Details */}
             <div className="p-5 flex flex-col justify-between flex-1 space-y-3">
               <div>
-                <h3 className="text-base font-bold text-stone-900 group-hover:text-sky-900 transition-colors leading-snug">
+                <h3 className="text-base font-bold text-stone-900 group-hover:text-red-700 transition-colors leading-snug">
                   {video.title}
                 </h3>
                 <p className="text-xs text-stone-600 mt-2 leading-relaxed line-clamp-2">
@@ -142,17 +176,18 @@ export const VideoLessonsSection: React.FC<VideoLessonsSectionProps> = ({ onSele
                 </p>
               </div>
 
-              {/* Tags & Author */}
+              {/* Tags & Action */}
               <div className="pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
                 <span className="text-stone-500 font-medium">
                   {video.sheikh}
                 </span>
-                <span className="text-sky-700 font-bold flex items-center gap-1 group-hover:translate-x-[-2px] transition-transform">
-                  <span>مشاهدة الدرس الآن</span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-50 text-red-700 font-bold group-hover:bg-red-600 group-hover:text-white transition-colors">
+                  <span>مشاهدة الدرس على يوتيوب</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </span>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
 

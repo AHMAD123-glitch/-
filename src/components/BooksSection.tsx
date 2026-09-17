@@ -25,8 +25,11 @@ export const BooksSection: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-bold font-amiri leading-tight text-white">
-            قريباً بإذن الله — مكتبة المؤلفات
+            «قريباً بإذن الله»
           </h1>
+          <h2 className="text-lg sm:text-xl font-bold font-amiri text-amber-300">
+            مكتبة المؤلفات والكتب الشرعية المعتمدة
+          </h2>
 
           <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
             المكتبة الرقمية التخصصية لمؤلفات وشروحات وتحقيقات فضيلة الشيخ هيثم بن محمد جميل سرحان حفظه الله، المشرف العام على معهد السنة.

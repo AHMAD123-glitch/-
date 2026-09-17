@@ -115,9 +115,17 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
           <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-stone-300 border-t border-stone-800/80">
             <span className="flex items-center gap-1.5 text-emerald-300 font-semibold">
               <Check className="w-4 h-4 text-emerald-400" />
-              الموقع الرسمي المعتمد (دروس ومحاضرات نظيفة وجاهزة):
+              الموقع الرسمي:
               <a href={INSTITUTE_INFO.officialWebsite} target="_blank" rel="noreferrer" className="text-white hover:underline underline-offset-4 font-mono font-bold mr-1">
                 {INSTITUTE_INFO.officialWebsiteDisplay}
+              </a>
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-1.5 text-red-300 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-red-500"></span>
+              قناة يوتيوب المعتمدة:
+              <a href={INSTITUTE_INFO.officialYouTube} target="_blank" rel="noreferrer" className="text-white hover:underline underline-offset-4 font-mono font-bold mr-1">
+                {INSTITUTE_INFO.officialYouTubeDisplay}
               </a>
             </span>
             <span>•</span>
@@ -307,12 +315,12 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
                   الدروس المرئية وسلاسل المتون
                 </h3>
                 <p className="text-xs text-stone-500 mt-1 leading-relaxed">
-                  فيديوهات وشروح مشجرة مع الخرائط الذهنية التوضيحية لمتون التوحيد والفقه.
+                  شروح مصورة وجداول تشجيرية للمتون العلمية مباشرة عبر قناة معهد السنة على يوتيوب (@mahadsunnah).
                 </p>
               </div>
             </div>
             <div className="pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-semibold text-sky-700 group-hover:translate-x-[-4px] transition-transform">
-              <span>مشاهدة الدروس المرئية</span>
+              <span>مشاهدة على قناة يوتيوب المعتمدة</span>
               <ArrowLeft className="w-4 h-4" />
             </div>
           </div>
@@ -334,15 +342,15 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
               </div>
               <div>
                 <h3 className="text-lg font-bold text-stone-900 group-hover:text-amber-900 transition-colors font-amiri">
-                  قريباً بإذن الله — مكتبة المؤلفات
+                  «قريباً بإذن الله»
                 </h3>
                 <p className="text-xs text-stone-600 mt-1 leading-relaxed">
-                  يجري إعداد وتدقيق النسخ الرقمية المعتمدة للمتون المشجرة والخرائط الذهنية لفضيلة الشيخ، والاعتماد حصراً على الموقع الرسمي المعتمد mahadsunnah.com.
+                  مكتبة المؤلفات والكتب الشرعية: يجري تدقيق وإخراج النسخ الرقمية المعتمدة لفضيلة الشيخ وإتاحتها قريباً بإذن الله.
                 </p>
               </div>
             </div>
             <div className="pt-4 border-t border-amber-100 flex items-center justify-between text-xs font-semibold text-amber-800 group-hover:translate-x-[-4px] transition-transform">
-              <span>تفاصيل مكتبة المؤلفات (قريباً)</span>
+              <span>بيان المعهد (قريباً بإذن الله)</span>
               <ArrowLeft className="w-4 h-4" />
             </div>
           </div>

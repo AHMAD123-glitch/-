@@ -111,8 +111,13 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ currentAudio, onClose 
 
   const formatTime = (timeInSec: number) => {
     if (isNaN(timeInSec)) return '00:00';
-    const mins = Math.floor(timeInSec / 60);
-    const secs = Math.floor(timeInSec % 60);
+    const totalSecs = Math.floor(timeInSec);
+    const hours = Math.floor(totalSecs / 3600);
+    const mins = Math.floor((totalSecs % 3600) / 60);
+    const secs = totalSecs % 60;
+    if (hours > 0) {
+      return `${hours}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
@@ -128,6 +133,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ currentAudio, onClose 
     >
       <audio
         ref={audioRef}
+        preload="metadata"
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
         onEnded={() => setIsPlaying(false)}
@@ -182,7 +188,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ currentAudio, onClose 
               <div className="overflow-hidden flex-1">
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] bg-emerald-800/80 text-emerald-200 px-1.5 py-0.5 rounded font-medium">
-                    {currentAudio.sourceType === 'quran' ? 'تلاوة قرآنية' : 'درس صوتي'}
+                    {currentAudio.sourceType === 'quran' ? 'تلاوة سورة كاملة' : 'تسجيل صوتي كامل للدرس'}
                   </span>
                   <h4 className="text-xs sm:text-sm font-semibold text-white truncate">
                     {currentAudio.title}

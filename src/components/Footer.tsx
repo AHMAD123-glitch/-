@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <button onClick={() => onNavigate('books')} className="hover:text-amber-300 transition-colors cursor-pointer text-stone-400">
-                  قريباً بإذن الله — مكتبة المؤلفات
+                  قريباً بإذن الله
                 </button>
               </li>
               <li>
@@ -82,10 +82,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* Official Websites Links */}
+          {/* Official Websites & Channels Links */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
-              الموقع الرسمي المعتمد
+              الروابط الرسمية المعتمدة
             </h4>
             <div className="space-y-2.5 text-xs">
               <a
@@ -98,20 +98,39 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <div className="overflow-hidden">
                   <div className="flex items-center gap-1.5">
                     <span className="block font-bold text-white">الموقع الرسمي للمعهد</span>
-                    <span className="text-[10px] bg-emerald-800 text-emerald-200 px-1 rounded">جاهز ✅</span>
+                    <span className="text-[10px] bg-emerald-800 text-emerald-200 px-1 rounded">معتمد ✅</span>
                   </div>
                   <span className="text-xs text-emerald-300 font-mono font-semibold">{INSTITUTE_INFO.officialWebsiteDisplay}</span>
                 </div>
                 <ExternalLink className="w-4 h-4 mr-auto text-emerald-400" />
               </a>
 
+              <a
+                href={INSTITUTE_INFO.officialYouTube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 p-3 rounded-xl bg-red-950/60 hover:bg-red-900/60 border border-red-700/60 text-red-200 hover:text-white transition-colors"
+              >
+                <div className="w-5 h-5 rounded bg-red-600 text-white flex items-center justify-center font-bold text-[10px] shrink-0">
+                  ▶
+                </div>
+                <div className="overflow-hidden">
+                  <div className="flex items-center gap-1.5">
+                    <span className="block font-bold text-white">قناة يوتيوب المعتمدة</span>
+                    <span className="text-[10px] bg-red-800 text-red-200 px-1 rounded">رسمية ✅</span>
+                  </div>
+                  <span className="text-xs text-red-300 font-mono font-semibold">{INSTITUTE_INFO.officialYouTubeDisplay}</span>
+                </div>
+                <ExternalLink className="w-4 h-4 mr-auto text-red-400" />
+              </a>
+
               <div className="p-2.5 rounded-xl bg-stone-900/80 border border-stone-800 text-stone-400 text-xs">
                 <div className="flex items-center gap-1.5 text-amber-400 font-semibold mb-1">
                   <span className="w-2 h-2 rounded-full bg-amber-400"></span>
-                  <span>قريباً بإذن الله — موسوعة الحديث النبوي</span>
+                  <span>قريباً بإذن الله</span>
                 </div>
                 <p className="text-[11px] text-stone-400">
-                  لا نربطه ولا نعرضه حتى إشعار آخر، لحين اكتمال المراجعة والتأصيل العلمي.
+                  موسوعة الحديث الشريف ومكتبة المؤلفات: قريباً بإذن الله بعد استكمال المراجعة والتأصيل.
                 </p>
               </div>
             </div>
