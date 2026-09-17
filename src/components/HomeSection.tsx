@@ -13,7 +13,9 @@ import {
   Scroll,
   Radio,
   BookMarked,
-  Globe
+  Globe,
+  Check,
+  ShieldCheck
 } from 'lucide-react';
 import { TabType, AudioLesson } from '../types';
 import { INSTITUTE_INFO, SCHEDULE_ITEMS, DAILY_BENEFITS, BOOKS_LIST, HADEETH_ENCYCLOPEDIA_INFO } from '../data/mockData';
@@ -66,19 +68,25 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <button
-              id="hero-explore-hadeeth-btn"
-              onClick={() => onNavigate('hadeeth')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-stone-950 font-bold text-sm shadow-lg shadow-amber-900/30 transition-all hover:translate-y-[-1px] cursor-pointer"
+            <a
+              id="hero-mahadsunnah-btn"
+              href={INSTITUTE_INFO.officialWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold text-sm shadow-xl shadow-emerald-950/50 transition-all hover:translate-y-[-1px] cursor-pointer"
             >
-              <Sparkles className="w-4 h-4 text-stone-950" />
-              <span>موسوعة الحديث النبوي (72 لغة)</span>
-            </button>
+              <Globe className="w-4 h-4 text-emerald-100" />
+              <span>زيارة الموقع الرسمي المعتمد: {INSTITUTE_INFO.officialWebsiteDisplay}</span>
+              <span className="text-[10px] bg-emerald-800/90 text-emerald-200 border border-emerald-400/40 px-2 py-0.5 rounded-full font-bold">
+                جاهز ✅
+              </span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
 
             <button
               id="hero-explore-quran-btn"
               onClick={() => onNavigate('quran')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-lg shadow-emerald-900/40 transition-all hover:translate-y-[-1px] cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-stone-800/90 hover:bg-stone-700/90 border border-emerald-700/50 text-emerald-200 font-semibold text-sm transition-all hover:text-white cursor-pointer"
             >
               <BookOpen className="w-4 h-4" />
               <span>القرآن الكريم وتفسيره</span>
@@ -93,24 +101,67 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
               <span>الدروس والمحاضرات الصوتية</span>
             </button>
 
-            <a
-              id="hero-sarhaan-link"
-              href={INSTITUTE_INFO.booksWebsite}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-300 border border-amber-600/40 font-semibold text-sm shadow transition-all hover:translate-y-[-1px]"
+            <button
+              id="hero-explore-video-btn"
+              onClick={() => onNavigate('video')}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-stone-800/80 hover:bg-stone-700/80 border border-stone-700 text-stone-200 font-semibold text-sm transition-all hover:text-white cursor-pointer"
             >
-              <BookMarked className="w-4 h-4" />
-              <span>مؤلفات الشيخ (sarhaan.com)</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
+              <Video className="w-4 h-4 text-sky-400" />
+              <span>الدروس المرئية والمتون</span>
+            </button>
           </div>
 
           {/* Direct official links pill */}
-          <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-stone-400 border-t border-stone-800/80">
-            <span>الموقع الرسمي: <a href={INSTITUTE_INFO.officialWebsite} target="_blank" rel="noreferrer" className="text-emerald-400 hover:underline">{INSTITUTE_INFO.officialWebsiteDisplay}</a></span>
+          <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-stone-300 border-t border-stone-800/80">
+            <span className="flex items-center gap-1.5 text-emerald-300 font-semibold">
+              <Check className="w-4 h-4 text-emerald-400" />
+              الموقع الرسمي المعتمد (دروس ومحاضرات نظيفة وجاهزة):
+              <a href={INSTITUTE_INFO.officialWebsite} target="_blank" rel="noreferrer" className="text-white hover:underline underline-offset-4 font-mono font-bold mr-1">
+                {INSTITUTE_INFO.officialWebsiteDisplay}
+              </a>
+            </span>
             <span>•</span>
             <span>البريد المعتمد: <a href={`mailto:${INSTITUTE_INFO.officialEmail}`} className="text-amber-400 hover:underline font-mono">{INSTITUTE_INFO.officialEmail}</a></span>
+          </div>
+        </div>
+      </section>
+
+      {/* Official Ready Website Banner */}
+      <section className="bg-gradient-to-r from-emerald-900 via-stone-900 to-emerald-950 border-2 border-emerald-600/60 rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative z-10">
+          <div className="space-y-2.5 max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span>الموقع الرسمي المعتمد والجاهز للنشر فوراً ✅</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold font-amiri text-white">
+              دروس ومحاضرات فضيلة الشيخ هيثم سرحان
+            </h2>
+            <p className="text-stone-300 text-xs sm:text-sm leading-relaxed">
+              تم اعتماد وربط الموقع الرسمي المعتمد لمعهد السنة <span className="text-amber-300 font-mono font-bold">({INSTITUTE_INFO.officialWebsiteDisplay})</span>، ويضم الدروس العلمية المؤصلة، وشروحات المتون، والتسجيلات الصوتية والمرئية الكاملة بحلة نظيفة وجاهزة تماماً.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
+            <a
+              id="mahadsunnah-spotlight-btn"
+              href={INSTITUTE_INFO.officialWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-extrabold text-sm sm:text-base shadow-2xl shadow-emerald-950/60 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <Globe className="w-5 h-5" />
+              <span>دخول الموقع الرسمي: {INSTITUTE_INFO.officialWebsiteDisplay}</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
+
+            <button
+              onClick={() => onNavigate('audio')}
+              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 text-xs sm:text-sm font-semibold transition-colors cursor-pointer"
+            >
+              <Headphones className="w-4 h-4 text-amber-400" />
+              <span>الدروس الصوتية بالتطبيق</span>
+            </button>
           </div>
         </div>
       </section>
@@ -161,32 +212,32 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {/* Card: Hadeeth Encyclopedia (NEW) */}
+          {/* Card: Hadeeth Encyclopedia (Coming Soon) */}
           <div 
             id="portal-card-hadeeth"
             onClick={() => onNavigate('hadeeth')}
-            className="group bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 text-white rounded-2xl p-5 border border-emerald-700/50 shadow-md hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between"
+            className="group bg-gradient-to-br from-stone-900 via-stone-900 to-emerald-950/80 text-white rounded-2xl p-5 border border-amber-600/30 shadow-md hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 group-hover:bg-amber-500 group-hover:text-stone-950 transition-colors flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-300 border border-amber-500/30 group-hover:bg-amber-500 group-hover:text-stone-950 transition-colors flex items-center justify-center">
                   <Sparkles className="w-6 h-6" />
                 </div>
-                <span className="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded font-bold">
-                  3,582 حديث • 72 لغة
+                <span className="text-[10px] bg-amber-900/60 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded font-bold">
+                  قريباً بإذن الله
                 </span>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-white group-hover:text-amber-300 transition-colors font-amiri">
-                  موسوعة أحاديث النبي ﷺ
+                <h3 className="text-lg font-bold text-amber-300 group-hover:text-amber-200 transition-colors font-amiri">
+                  قريباً بإذن الله — موسوعة الحديث النبوي
                 </h3>
                 <p className="text-xs text-stone-300 mt-1 leading-relaxed">
-                  موسوعة عالمية تشمل شروح الأحاديث، معاني المفردات، الفوائد، وسير السنة بـ 72 لغة عالمية.
+                  مشروع علمي عالمي شامل لخدمة السنة النبوية، غير مفعل ولا مرتبط بأي روابط خارجية حتى إشعار آخر لحين اكتمال المراجعة والاعتماد.
                 </p>
               </div>
             </div>
-            <div className="pt-4 border-t border-emerald-900/60 flex items-center justify-between text-xs font-semibold text-amber-300 group-hover:translate-x-[-4px] transition-transform">
-              <span>تصفح الموسوعة والبحث</span>
+            <div className="pt-4 border-t border-stone-800 flex items-center justify-between text-xs font-semibold text-amber-400 group-hover:translate-x-[-4px] transition-transform">
+              <span>بيان تفاصيل الموسوعة (قريباً)</span>
               <ArrowLeft className="w-4 h-4" />
             </div>
           </div>
@@ -266,32 +317,32 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
             </div>
           </div>
 
-          {/* Card: Books & Publications */}
+          {/* Card: Books & Publications (Coming Soon) */}
           <div 
             id="portal-card-books"
             onClick={() => onNavigate('books')}
-            className="group bg-white rounded-2xl p-5 border border-amber-200 hover:border-amber-500 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between bg-gradient-to-br from-amber-50/40 to-white"
+            className="group bg-white rounded-2xl p-5 border border-amber-300/80 hover:border-amber-500 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between bg-gradient-to-br from-amber-50/50 to-white"
           >
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 group-hover:bg-amber-600 group-hover:text-white transition-colors flex items-center justify-center">
-                <Scroll className="w-6 h-6" />
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 group-hover:bg-amber-600 group-hover:text-white transition-colors flex items-center justify-center">
+                  <Scroll className="w-6 h-6" />
+                </div>
+                <span className="text-[10px] bg-amber-100 text-amber-900 border border-amber-300 px-2 py-0.5 rounded font-bold">
+                  قريباً بإذن الله
+                </span>
               </div>
               <div>
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold text-stone-900 group-hover:text-amber-900 transition-colors">
-                    الكتب والمؤلفات
-                  </h3>
-                  <span className="text-[10px] bg-amber-200 text-amber-900 px-2 py-0.5 rounded font-mono font-bold">
-                    sarhaan.com
-                  </span>
-                </div>
-                <p className="text-xs text-stone-500 mt-1 leading-relaxed">
-                  مؤلفات وتحقيقات فضيلة الشيخ هيثم سرحان مع رابط مباشر للموقع الرسمي للكتب.
+                <h3 className="text-lg font-bold text-stone-900 group-hover:text-amber-900 transition-colors font-amiri">
+                  قريباً بإذن الله — مكتبة المؤلفات
+                </h3>
+                <p className="text-xs text-stone-600 mt-1 leading-relaxed">
+                  يجري إعداد وتدقيق النسخ الرقمية المعتمدة للمتون المشجرة والخرائط الذهنية لفضيلة الشيخ، والاعتماد حصراً على الموقع الرسمي المعتمد mahadsunnah.com.
                 </p>
               </div>
             </div>
             <div className="pt-4 border-t border-amber-100 flex items-center justify-between text-xs font-semibold text-amber-800 group-hover:translate-x-[-4px] transition-transform">
-              <span>استعراض المكتبة والمؤلفات</span>
+              <span>تفاصيل مكتبة المؤلفات (قريباً)</span>
               <ArrowLeft className="w-4 h-4" />
             </div>
           </div>

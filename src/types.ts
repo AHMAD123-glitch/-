@@ -62,7 +62,7 @@ export interface Book {
   description: string;
   coverImage?: string;
   features: string[];
-  directUrl: string; // e.g. sarhaan.com
+  directUrl: string; // e.g. mahadsunnah.com
   pdfUrl?: string;
 }
 

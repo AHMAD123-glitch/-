@@ -34,15 +34,46 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
           </button>
         </div>
 
-        {/* Video Player Area */}
-        <div className="relative aspect-video bg-black w-full">
-          <iframe
-            src={`${video.videoUrl}?autoplay=1&rel=0`}
-            title={video.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className="w-full h-full border-0"
-          />
+        {/* Official Video Portal Presentation Area */}
+        <div className="relative aspect-video bg-gradient-to-br from-stone-950 via-emerald-950 to-stone-900 w-full flex flex-col items-center justify-center p-6 text-center border-b border-stone-800">
+          <div className="max-w-lg space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-semibold">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+              <span>مصدر رسمي معتمد من معهد السنة</span>
+            </div>
+
+            <h4 className="text-lg sm:text-xl font-bold font-amiri text-white leading-snug">
+              {video.title}
+            </h4>
+
+            <p className="text-xs text-stone-300">
+              {video.sheikh} • {video.series} ({video.duration})
+            </p>
+
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                id="watch-official-youtube-btn"
+                href="https://www.youtube.com/@MAHADSUNNAH"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs sm:text-sm shadow-lg transition-all hover:scale-105 active:scale-95"
+              >
+                <span>مشاهدة الدرس عبر قناة معهد السنة الرسمية (@MAHADSUNNAH)</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+
+              <a
+                id="watch-official-site-btn"
+                href={INSTITUTE_INFO.officialWebsite}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-lg transition-all hover:scale-105 active:scale-95"
+              >
+                <span>الموقع الرسمي: {INSTITUTE_INFO.officialWebsiteDisplay}</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Video Info & Scientific Context */}
@@ -97,7 +128,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-stone-950 font-semibold transition-colors"
             >
-              <span>تصفح كتب الشيخ في sarhaan.com</span>
+              <span>تصفح كتب ومتون الشرح عبر {INSTITUTE_INFO.officialWebsiteDisplay}</span>
               <ExternalLink className="w-3 h-3" />
             </a>
           </div>

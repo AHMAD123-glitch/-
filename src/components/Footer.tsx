@@ -55,8 +55,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('hadeeth')} className="hover:text-amber-300 font-bold transition-colors cursor-pointer flex items-center gap-1">
-                  <span>موسوعة الحديث النبوي (72 لغة)</span>
+                <button onClick={() => onNavigate('hadeeth')} className="hover:text-amber-300 transition-colors cursor-pointer flex items-center gap-1 text-stone-400">
+                  <span>قريباً بإذن الله — موسوعة الحديث النبوي</span>
                 </button>
               </li>
               <li>
@@ -70,6 +70,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
+                <button onClick={() => onNavigate('books')} className="hover:text-amber-300 transition-colors cursor-pointer text-stone-400">
+                  قريباً بإذن الله — مكتبة المؤلفات
+                </button>
+              </li>
+              <li>
                 <button onClick={() => onNavigate('schedule')} className="hover:text-white transition-colors cursor-pointer">
                   جدول اللقاءات الأسبوعية
                 </button>
@@ -80,50 +85,35 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Official Websites Links */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
-              المواقع الرسمية المعتمدة
+              الموقع الرسمي المعتمد
             </h4>
             <div className="space-y-2.5 text-xs">
               <a
                 href={INSTITUTE_INFO.officialWebsite}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 p-2.5 rounded-xl bg-stone-900 hover:bg-stone-850 border border-stone-800 text-stone-300 hover:text-white transition-colors"
+                className="flex items-center gap-2 p-3 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/60 border border-emerald-700/60 text-emerald-200 hover:text-white transition-colors"
               >
-                <Globe className="w-4 h-4 text-emerald-400" />
+                <Globe className="w-5 h-5 text-emerald-400 shrink-0" />
                 <div className="overflow-hidden">
-                  <span className="block font-bold text-white">الموقع الرسمي للمعهد</span>
-                  <span className="text-[11px] text-stone-400 font-mono">{INSTITUTE_INFO.officialWebsiteDisplay}</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="block font-bold text-white">الموقع الرسمي للمعهد</span>
+                    <span className="text-[10px] bg-emerald-800 text-emerald-200 px-1 rounded">جاهز ✅</span>
+                  </div>
+                  <span className="text-xs text-emerald-300 font-mono font-semibold">{INSTITUTE_INFO.officialWebsiteDisplay}</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 mr-auto text-stone-500" />
+                <ExternalLink className="w-4 h-4 mr-auto text-emerald-400" />
               </a>
 
-              <a
-                href="https://sarhaan.com/hadeeth/ar/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 p-2.5 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/40 border border-emerald-900/50 text-emerald-200 hover:text-white transition-colors"
-              >
-                <Globe className="w-4 h-4 text-emerald-400" />
-                <div className="overflow-hidden">
-                  <span className="block font-bold text-emerald-100">موسوعة أحاديث النبي ﷺ</span>
-                  <span className="text-[11px] text-emerald-300/80 font-mono">sarhaan.com/hadeeth</span>
+              <div className="p-2.5 rounded-xl bg-stone-900/80 border border-stone-800 text-stone-400 text-xs">
+                <div className="flex items-center gap-1.5 text-amber-400 font-semibold mb-1">
+                  <span className="w-2 h-2 rounded-full bg-amber-400"></span>
+                  <span>قريباً بإذن الله — موسوعة الحديث النبوي</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 mr-auto text-emerald-400" />
-              </a>
-
-              <a
-                href={INSTITUTE_INFO.booksWebsite}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 p-2.5 rounded-xl bg-amber-950/40 hover:bg-amber-900/40 border border-amber-900/50 text-amber-200 hover:text-white transition-colors"
-              >
-                <BookMarked className="w-4 h-4 text-amber-400" />
-                <div className="overflow-hidden">
-                  <span className="block font-bold text-amber-100">موقع الكتب والمؤلفات</span>
-                  <span className="text-[11px] text-amber-300/80 font-mono">{INSTITUTE_INFO.booksWebsiteDisplay}</span>
-                </div>
-                <ExternalLink className="w-3.5 h-3.5 mr-auto text-amber-400" />
-              </a>
+                <p className="text-[11px] text-stone-400">
+                  لا نربطه ولا نعرضه حتى إشعار آخر، لحين اكتمال المراجعة والتأصيل العلمي.
+                </p>
+              </div>
             </div>
           </div>
 

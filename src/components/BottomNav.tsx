@@ -11,10 +11,10 @@ export const BottomNav: React.FC<BottomNavProps> = ({ currentTab, setCurrentTab 
   const items: { id: TabType; label: string; icon: React.ReactNode }[] = [
     { id: 'home', label: 'الرئيسية', icon: <Home className="w-5 h-5" /> },
     { id: 'quran', label: 'القرآن', icon: <BookOpen className="w-5 h-5" /> },
-    { id: 'hadeeth', label: 'الحديث', icon: <Sparkles className="w-5 h-5" /> },
+    { id: 'hadeeth', label: 'الحديث (قريباً)', icon: <Sparkles className="w-5 h-5" /> },
     { id: 'audio', label: 'الصوتيات', icon: <Headphones className="w-5 h-5" /> },
     { id: 'video', label: 'المرئيات', icon: <Video className="w-5 h-5" /> },
-    { id: 'books', label: 'الكتب', icon: <BookMarked className="w-5 h-5" /> },
+    { id: 'books', label: 'المؤلفات (قريباً)', icon: <BookMarked className="w-5 h-5" /> },
     { id: 'schedule', label: 'الجدول', icon: <Calendar className="w-5 h-5" /> },
     { id: 'contact', label: 'تواصل', icon: <Mail className="w-5 h-5" /> },
   ];

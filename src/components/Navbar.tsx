@@ -28,10 +28,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
     { id: 'home', label: 'الرئيسية', icon: <Home className="w-4 h-4" /> },
     { id: 'about', label: 'عن المعهد', icon: <Info className="w-4 h-4" /> },
     { id: 'quran', label: 'القرآن الكريم', icon: <BookOpen className="w-4 h-4" /> },
-    { id: 'hadeeth', label: 'موسوعة الحديث', icon: <Sparkles className="w-4 h-4 text-amber-400" /> },
+    { id: 'hadeeth', label: 'قريباً: موسوعة الحديث النبوي', icon: <Sparkles className="w-4 h-4 text-amber-400" /> },
     { id: 'audio', label: 'الدروس الصوتية', icon: <Headphones className="w-4 h-4" /> },
     { id: 'video', label: 'الدروس المرئية', icon: <Video className="w-4 h-4" /> },
-    { id: 'books', label: 'الكتب والمؤلفات', icon: <Compass className="w-4 h-4" /> },
+    { id: 'books', label: 'قريباً: مكتبة المؤلفات', icon: <Compass className="w-4 h-4 text-amber-400" /> },
     { id: 'schedule', label: 'جدول اللقاءات', icon: <Calendar className="w-4 h-4" /> },
     { id: 'contact', label: 'تواصل معنا', icon: <Mail className="w-4 h-4" /> },
   ];
@@ -45,30 +45,21 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
   return (
     <header className="sticky top-0 z-40 bg-stone-900/95 backdrop-blur-md text-stone-100 border-b border-emerald-900/40 shadow-lg">
       {/* Top Banner with official links & supervisor info */}
-      <div className="bg-emerald-950/80 border-b border-emerald-900/30 text-xs py-1.5 px-4">
+      <div className="bg-emerald-950/90 border-b border-emerald-900/40 text-xs py-1.5 px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2 text-emerald-300">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>بإشراف فضيلة الشيخ / هيثم بن محمد جميل سرحان حفظه الله</span>
+            <span>بإشراف فضيلة الشيخ / هيثم بن محمد بن جميل سرحان حفظه الله</span>
           </div>
-          <div className="flex items-center gap-4 text-stone-300">
+          <div className="flex items-center gap-3 text-stone-300">
+            <span className="text-stone-400 hidden sm:inline">دروس ومحاضرات الشيخ هيثم سرحان جاهزة ومحدثة ✅</span>
             <a 
               href={INSTITUTE_INFO.officialWebsite} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hover:text-emerald-400 transition-colors flex items-center gap-1"
+              className="bg-emerald-800/80 hover:bg-emerald-700 text-white px-2.5 py-0.5 rounded-full transition-colors flex items-center gap-1 font-semibold"
             >
-              <span>الموقع الرسمي: {INSTITUTE_INFO.officialWebsiteDisplay}</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
-            <span className="text-stone-600 hidden sm:inline">|</span>
-            <a 
-              href={INSTITUTE_INFO.booksWebsite} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-amber-400 transition-colors hidden sm:flex items-center gap-1 text-amber-200/90"
-            >
-              <span>موقع الكتب: {INSTITUTE_INFO.booksWebsiteDisplay}</span>
+              <span>الموقع الرسمي المعتمد: {INSTITUTE_INFO.officialWebsiteDisplay}</span>
               <ExternalLink className="w-3 h-3" />
             </a>
           </div>
@@ -127,13 +118,13 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
           {/* Quick Action Button & Mobile Toggle */}
           <div className="flex items-center gap-3">
             <a
-              id="sarhaan-direct-btn"
-              href={INSTITUTE_INFO.booksWebsite}
+              id="mahadsunnah-direct-btn"
+              href={INSTITUTE_INFO.officialWebsite}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-amber-600 hover:bg-amber-500 text-stone-950 shadow transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow transition-colors"
             >
-              <span>موقع الكتب sarhaan.com</span>
+              <span>الموقع الرسمي: mahadsunnah.com</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
 
@@ -175,21 +166,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, setCurrentTab }) => 
 
           <div className="pt-2 border-t border-stone-800 flex flex-col gap-2 text-xs">
             <a 
-              href={INSTITUTE_INFO.booksWebsite} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center justify-between p-2 rounded bg-amber-900/30 text-amber-200 border border-amber-800/40"
-            >
-              <span>موقع مؤلفات وكتب الشيخ (sarhaan.com)</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-            <a 
               href={INSTITUTE_INFO.officialWebsite} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center justify-between p-2 rounded bg-emerald-950/50 text-emerald-300 border border-emerald-800/40"
+              className="flex items-center justify-between p-2.5 rounded-lg bg-emerald-900/50 text-emerald-200 border border-emerald-700/50 font-medium"
             >
-              <span>الموقع الرسمي للمعهد (mahadsunnah.com)</span>
+              <span>الموقع الرسمي المعتمد (mahadsunnah.com) ✅</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>

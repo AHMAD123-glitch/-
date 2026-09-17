@@ -6,8 +6,8 @@ export const INSTITUTE_INFO = {
   supervisorShort: 'الشيخ هيثم سرحان',
   officialWebsite: 'https://mahadsunnah.com',
   officialWebsiteDisplay: 'mahadsunnah.com',
-  booksWebsite: 'https://sarhaan.com',
-  booksWebsiteDisplay: 'sarhaan.com',
+  booksWebsite: 'https://mahadsunnah.com',
+  booksWebsiteDisplay: 'mahadsunnah.com',
   officialEmail: 'AHMAD12.3@outlook.sa',
   developerCredit: 'أحمد هليل الذبياني',
   brief: 'معهد علمي شرعي مستقل يُعنى بنشر العلوم الشرعية المؤصلة على نهج الكتاب والسنة بفهم سلف الأمة، وتيسير المتون العلمية لطلبة العلم وعموم المسلمين في مشارق الأرض ومغاربها.',
@@ -17,7 +17,7 @@ export const INSTITUTE_INFO = {
     'تيسير دراسة المتون العلمية التأصيلية عبر الخرائط الذهنية والجداول المنظمة.',
     'العناية بكتاب الله تعالى تلاوةً وحفظاً وتدبراً وتفسيراً على فهم السلف الصالح.',
     'إيصال الدروس والمحاضرات النافعة لجميع المسلمين حول العالم مجاناً وبأعلى جودة.',
-    'طباعة وتوزيع الكتب والمؤلفات النافعة وترجمتها لعدة لغات لنفع الأمة.'
+    'ربط طلاب العلم بالموقع الرسمي المعتمد لمعهد السنة (mahadsunnah.com).'
   ],
   supervisorWord: `الحمد لله والصلاة والسلام على رسول الله وعلى آله وصحبه ومن والاه.
 أما بعد؛ فإن طلب العلم الشرعي من أجلّ القربات وأعظم العبادات، وقد كان نهج أئمتنا وسلفنا الصالح هو البداية بصغار العلم قبل كباره، والتدرج في حفظ المتون وفهم معانيها.
@@ -129,7 +129,7 @@ export const AUDIO_LESSONS: AudioLesson[] = [
     categoryLabel: 'العقيدة والتوحيد',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '42:15',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+    audioUrl: 'https://server10.mp3quran.net/minsh/001.mp3',
     date: '1446/08/12 هـ',
     description: 'مدخل تأصيلي لمقدمة متن الأصول الثلاثة، وبيان أهمية معرفة العبد ربه ودينه ونبيه محمداً صلى الله عليه وسلم بالأدلة من الكتاب والسنة.',
     series: 'سلسلة شرح الأصول الثلاثة بالخرائط الذهنية'
@@ -141,7 +141,7 @@ export const AUDIO_LESSONS: AudioLesson[] = [
     categoryLabel: 'العقيدة والتوحيد',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '54:30',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+    audioUrl: 'https://server9.mp3quran.net/hthfi/112.mp3',
     date: '1446/08/10 هـ',
     description: 'بيان معاني آيات الباب وأحاديثه، ومفهوم تحقيق التوحيد الذي يدخل صاحبه الجنة بغير حساب ولا عذاب.',
     series: 'سلسلة شرح كتاب التوحيد'
@@ -153,7 +153,7 @@ export const AUDIO_LESSONS: AudioLesson[] = [
     categoryLabel: 'التفسير وعلوم القرآن',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '38:20',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+    audioUrl: 'https://server10.mp3quran.net/minsh/001.mp3',
     date: '1446/08/05 هـ',
     surahName: 'سورة الفاتحة',
     description: 'شرح المعاني الجليلة لأم الكتاب، وأقسام التوحيد الثلاثة المتضمنة في آياتها السبع.'
@@ -165,7 +165,7 @@ export const AUDIO_LESSONS: AudioLesson[] = [
     categoryLabel: 'المتون العلمية',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '35:45',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
+    audioUrl: 'https://server7.mp3quran.net/basit/113.mp3',
     date: '1446/07/28 هـ',
     description: 'شرح مبسط للقواعد الأربع التي تميز بين توحيد الأنبياء وشرك المشركين بالأدلة العقلية والنقلية.',
     series: 'سلسلة المتون الميسرة'
@@ -177,7 +177,7 @@ export const AUDIO_LESSONS: AudioLesson[] = [
     categoryLabel: 'الحديث الشريف',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '48:10',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+    audioUrl: 'https://server7.mp3quran.net/basit/114.mp3',
     date: '1446/07/20 هـ',
     description: 'قواعد الإخلاص والنية في الشريعة، والفوائد الفقهية والمسلكية المستنبطة من الحديث العظيم.',
     series: 'شرح الأربعين النووية'
@@ -189,7 +189,7 @@ export const AUDIO_LESSONS: AudioLesson[] = [
     categoryLabel: 'الفقه وأصوله',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '50:15',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+    audioUrl: 'https://server13.mp3quran.net/husr/036.mp3',
     date: '1446/07/15 هـ',
     description: 'جدول تفصيلي يوضح الفرق بين شروط الصلاة وأركانها وواجباتها وسننها، وتطبيقها العملي.',
     series: 'فقه العبادات الميسر'
@@ -201,7 +201,7 @@ export const AUDIO_LESSONS: AudioLesson[] = [
     categoryLabel: 'السيرة والآداب',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '45:00',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+    audioUrl: 'https://server8.mp3quran.net/afs/067.mp3',
     date: '1446/07/08 هـ',
     description: 'وقفات تربوية ومنهجية مع العهد المكي وثبات الصحابة رضوان الله عليهم على كلمة الإخلاص.',
     series: 'دروس السيرة النبوية العطرة'
@@ -213,7 +213,7 @@ export const AUDIO_LESSONS: AudioLesson[] = [
     categoryLabel: 'التفسير وعلوم القرآن',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '32:40',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
+    audioUrl: 'https://server9.mp3quran.net/hthfi/112.mp3',
     date: '1446/06/25 هـ',
     surahName: 'قصار السور',
     description: 'بيان فضل الإخلاص والمعوذتين في تحصين المسلم، ودلالتها على كمال توحيد الأسماء والصفات والاستعاذة بالله.'
@@ -227,7 +227,7 @@ export const VIDEO_LESSONS: VideoLesson[] = [
     series: 'سلسلة تأصيل العقيدة',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '38:15',
-    videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ', // Clean player
+    videoUrl: 'https://www.youtube.com/@MAHADSUNNAH',
     date: '1446/08/11 هـ',
     description: 'شرح مرئي كامل مع عرض الشاشات واللوحات التشجيرية لمتن الأصول الثلاثة للإمام محمد بن عبد الوهاب رحمه الله.',
     tags: ['العقيدة', 'الأصول الثلاثة', 'خرائط ذهنية']
@@ -238,7 +238,7 @@ export const VIDEO_LESSONS: VideoLesson[] = [
     series: 'سلسلة المتون العلمية',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '29:40',
-    videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/@MAHADSUNNAH',
     date: '1446/08/04 هـ',
     description: 'إيضاح مرئي تفصيلي لقواعد الشرك الأربع، وكيفية الرد على الشبهات بأسلوب عصري محكم.',
     tags: ['المتون', 'القواعد الأربع', 'التوحيد']
@@ -249,7 +249,7 @@ export const VIDEO_LESSONS: VideoLesson[] = [
     series: 'سلسلة فقه العبادات',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '45:20',
-    videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/@MAHADSUNNAH',
     date: '1446/07/26 هـ',
     description: 'شرح فقهي مرئي مع الرسوم التوضيحية لصفة صلاة النبي صلى الله عليه وسلم وشروطها وأركانها.',
     tags: ['الفقه', 'الصلاة', 'العبادات']
@@ -260,7 +260,7 @@ export const VIDEO_LESSONS: VideoLesson[] = [
     series: 'سلسلة المعتقد الحق',
     sheikh: 'الشيخ هيثم بن محمد جميل سرحان',
     duration: '52:10',
-    videoUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/@MAHADSUNNAH',
     date: '1446/07/18 هـ',
     description: 'مدخل إلى منهج أهل السنة والجماعة في أسماء الله وصفاته وإثبات ما أثبته الله لنفسه بلا تمثيل ولا تعطيل.',
     tags: ['العقيدة الواسطية', 'الأسماء والصفات']
@@ -276,7 +276,7 @@ export const BOOKS_LIST: Book[] = [
     pages: 120,
     description: 'طبعة متميزة ومبتكرة تعتمد أسلوب التشجير والخرائط الذهنية الملونة لتسهيل حفظ وضبط المتن واستيعاب مسائله.',
     features: ['خرائط ذهنية ملونة', 'أسئلة وتطبيقات في نهاية كل باب', 'تخريج الأدلة الشرعية'],
-    directUrl: 'https://sarhaan.com'
+    directUrl: 'https://mahadsunnah.com'
   },
   {
     id: 'bk-2',
@@ -286,7 +286,7 @@ export const BOOKS_LIST: Book[] = [
     pages: 64,
     description: 'رسالة نافعة توضح قواعد التوحيد الأربع التي فرقت بين عبادة الموحدين وشرك الجاهلية، بأقصر عبارة وأوضح دلالة.',
     features: ['جداول مقارنة نافعة', 'توضيح الشبهات والرد عليها', 'متاح بصيغة PDF قابلة للتحميل'],
-    directUrl: 'https://sarhaan.com'
+    directUrl: 'https://mahadsunnah.com'
   },
   {
     id: 'bk-3',
@@ -296,7 +296,7 @@ export const BOOKS_LIST: Book[] = [
     pages: 340,
     description: 'المرجع الشامل في توحيد العبادة، مشروحاً بأسلوب منهجي سلس مع شجرة تفريعية لكل باب توضح مناسبة الآيات والآثار لترجمة الباب.',
     features: ['شجرة تفريعية لـ 66 باباً', 'بيان مقاصد التراجم', 'تطبيقات عملية وفوائد تربوية'],
-    directUrl: 'https://sarhaan.com'
+    directUrl: 'https://mahadsunnah.com'
   },
   {
     id: 'bk-4',
@@ -306,7 +306,7 @@ export const BOOKS_LIST: Book[] = [
     pages: 96,
     description: 'كتاب فقهي ميسر في أهم العبادات العملية، مرتب بنظام البطاقات الذهنية ليسهل على الناشئة والمبتدئين إتقان صلاتهم.',
     features: ['مخططات توضيحية مصورة', 'فروق فقهية دقيقة', 'مراجعة معتمدة'],
-    directUrl: 'https://sarhaan.com'
+    directUrl: 'https://mahadsunnah.com'
   },
   {
     id: 'bk-5',
@@ -316,7 +316,7 @@ export const BOOKS_LIST: Book[] = [
     pages: 210,
     description: 'شرح جامع لأحاديث المصطفى صلى الله عليه وسلم التي عليها مدار الإسلام، مع استخراج الفوائد الإيمانية والأحكام الفقهية.',
     features: ['تقسيم الحديث إلى عناصر', 'معاني المفردات الغريبة', 'الفوائد والمسالك التربوية'],
-    directUrl: 'https://sarhaan.com'
+    directUrl: 'https://mahadsunnah.com'
   },
   {
     id: 'bk-6',
@@ -326,7 +326,7 @@ export const BOOKS_LIST: Book[] = [
     pages: 72,
     description: 'توضيح لنواقض الإسلام العشرة بأسلوب مؤصل يحذر المسلم مما يحبط عمله دون غلو أو إفراط أو تفريط.',
     features: ['ضوابط التكفير المعتبرة', 'أدلة القرآن والسنة', 'لغة واضحة وخرائط استدلال'],
-    directUrl: 'https://sarhaan.com'
+    directUrl: 'https://mahadsunnah.com'
   }
 ];
 
@@ -401,11 +401,13 @@ export const DAILY_BENEFITS = [
 
 export const HADEETH_ENCYCLOPEDIA_INFO = {
   title: 'موسوعة أحاديث النبي ﷺ',
-  subtitle: 'موسوعة الحديث النبوي الشريف',
+  subtitle: 'موسوعة الحديث النبوي الشريف (قريباً بإذن الله)',
   supervisor: 'فضيلة الشيخ / هيثم بن محمد بن جميل سرحان حفظه الله',
   totalHadeeths: '3,582',
   totalLanguages: 72,
-  description: 'مشروع علمي عالمي متكامل لخدمة السنة النبوية، يضم 3,582 حديثاً نبوياً مشروحاً ومبيناً لمعانيها وفوائدها العقدية والفقهية والتربوية، ومترجماً بدقة واحترافية إلى 72 لغة حية حول العالم، لتيسير وصول كلام النبي ﷺ لجميع المسلمين والباحثين.',
+  status: 'قريباً بإذن الله',
+  statusNote: 'القسم قيد الإعداد والمراجعة والتطوير بإشراف المعهد، وسيتم إطلاقه رسمياً فور اكتماله بإذن الله تعالى.',
+  description: 'مشروع علمي عالمي متكامل لخدمة السنة النبوية، يضم 3,582 حديثاً نبوياً مشروحاً ومبيناً لمعانيها وفوائدها العقدية والفقهية والتربوية، ومترجماً إلى 72 لغة حية حول العالم، لتيسير وصول كلام النبي ﷺ لجميع المسلمين والباحثين.',
   targetAudience: 'مناسبة لطلاب العلم، الباحثين الأكاديميين، والدعاة، وعموم المسلمين في مشارق الأرض ومغاربها.',
   scope: [
     'شرح الأحاديث النبوية المعتمدة مع ربطها بالأبواب الفقهية والعقدية والتربوية',
@@ -415,37 +417,28 @@ export const HADEETH_ENCYCLOPEDIA_INFO = {
     'ترجمة الأحاديث وشروحها إلى 72 لغة عالمية معتمدة'
   ],
   links: {
-    main: 'https://sarhaan.com/hadeeth',
-    mainDisplay: 'sarhaan.com/hadeeth',
-    arabic: 'https://sarhaan.com/hadeeth/ar/',
-    arabicDisplay: 'sarhaan.com/hadeeth/ar',
-    quranEncyclopedia: 'https://sarhaan.com/quran-3/',
-    quranEncyclopediaDisplay: 'sarhaan.com/quran-3'
-  },
-  introVideo: {
-    title: 'فيديو تعريفي بموسوعة أحاديث النبي ﷺ — الشيخ هيثم سرحان',
-    embedUrl: 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ',
-    description: 'عرض تعريفي شامل بجهود الموسوعة وأقسامها الـ 72 لغة وكيفية الاستفادة منها في الدعوة والتعلم.'
+    official: 'https://mahadsunnah.com',
+    officialDisplay: 'mahadsunnah.com'
   }
 };
 
 export const HADEETH_LANGUAGES = [
-  { code: 'ar', name: 'العربية', english: 'Arabic', flag: '🇸🇦', active: true, url: 'https://sarhaan.com/hadeeth/ar/' },
-  { code: 'en', name: 'الإنجليزية', english: 'English', flag: '🇬🇧', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'fr', name: 'الفرنسية', english: 'French', flag: '🇫🇷', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'ur', name: 'الأردية', english: 'Urdu', flag: '🇵🇰', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'id', name: 'الإندونيسية', english: 'Indonesian', flag: '🇮🇩', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'tr', name: 'التركية', english: 'Turkish', flag: '🇹🇷', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'ru', name: 'الروسية', english: 'Russian', flag: '🇷🇺', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'bn', name: 'البنغالية', english: 'Bengali', flag: '🇧🇩', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'es', name: 'الإسبانية', english: 'Spanish', flag: '🇪🇸', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'de', name: 'الألمانية', english: 'German', flag: '🇩🇪', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'fa', name: 'الفارسية', english: 'Persian', flag: '🇮🇷', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'sw', name: 'السواحيلية', english: 'Swahili', flag: '🇰🇪', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'zh', name: 'الصينية', english: 'Chinese', flag: '🇨🇳', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'hi', name: 'الهندية', english: 'Hindi', flag: '🇮🇳', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'ms', name: 'الملايو', english: 'Malay', flag: '🇲🇾', active: true, url: 'https://sarhaan.com/hadeeth' },
-  { code: 'ha', name: 'الهوسا', english: 'Hausa', flag: '🇳🇬', active: true, url: 'https://sarhaan.com/hadeeth' },
+  { code: 'ar', name: 'العربية', english: 'Arabic', flag: '🇸🇦', active: true },
+  { code: 'en', name: 'الإنجليزية', english: 'English', flag: '🇬🇧', active: true },
+  { code: 'fr', name: 'الفرنسية', english: 'French', flag: '🇫🇷', active: true },
+  { code: 'ur', name: 'الأردية', english: 'Urdu', flag: '🇵🇰', active: true },
+  { code: 'id', name: 'الإندونيسية', english: 'Indonesian', flag: '🇮🇩', active: true },
+  { code: 'tr', name: 'التركية', english: 'Turkish', flag: '🇹🇷', active: true },
+  { code: 'ru', name: 'الروسية', english: 'Russian', flag: '🇷🇺', active: true },
+  { code: 'bn', name: 'البنغالية', english: 'Bengali', flag: '🇧🇩', active: true },
+  { code: 'es', name: 'الإسبانية', english: 'Spanish', flag: '🇪🇸', active: true },
+  { code: 'de', name: 'الألمانية', english: 'German', flag: '🇩🇪', active: true },
+  { code: 'fa', name: 'الفارسية', english: 'Persian', flag: '🇮🇷', active: true },
+  { code: 'sw', name: 'السواحيلية', english: 'Swahili', flag: '🇰🇪', active: true },
+  { code: 'zh', name: 'الصينية', english: 'Chinese', flag: '🇨🇳', active: true },
+  { code: 'hi', name: 'الهندية', english: 'Hindi', flag: '🇮🇳', active: true },
+  { code: 'ms', name: 'الملايو', english: 'Malay', flag: '🇲🇾', active: true },
+  { code: 'ha', name: 'الهوسا', english: 'Hausa', flag: '🇳🇬', active: true },
 ];
 
 export const SAMPLE_HADEETHS: HadeethItem[] = [

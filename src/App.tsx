@@ -66,9 +66,7 @@ export default function App() {
             )}
 
             {currentTab === 'hadeeth' && (
-              <HadeethEncyclopediaSection 
-                onPlayAudio={handlePlayAudio}
-              />
+              <HadeethEncyclopediaSection />
             )}
 
             {currentTab === 'audio' && (
